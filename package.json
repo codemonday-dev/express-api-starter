@@ -1,0 +1,30 @@
+{
+  "name": "express-api-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "DOTENV_CONFIG_PATH=./environments/local.env nodemon --exec babel-node app.js",
+    "start": "DOTENV_CONFIG_PATH=./environments/deploy.env babel-node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.4",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
+  }
+}

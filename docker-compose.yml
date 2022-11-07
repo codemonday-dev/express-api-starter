@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  # Local PostgreSQL
+  local-postgres:
+    image: postgres:alpine
+    container_name: local_postgres
+    volumes:
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    env_file:
+      - ./environments/local.env
+    environment:
+      POSTGRES_PASSWORD: 123456
+    restart: always
+
+networks:
+  default:
+    external:
+      name: local-dev
